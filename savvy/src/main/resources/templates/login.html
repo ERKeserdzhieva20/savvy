@@ -1,21 +1,43 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-  <title>Login</title>
-  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<h2>Login</h2>
-<form th:action="@{/login}" method="post">
-  <label>Username:</label>
-  <input type="text" name="username" required />
+<div class="container">
+  <div class="left">
+    <h1>Login</h1>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <div class="signup-container">
+      <button class="signup-btn">
+        <span>Login</span>
+      </button>
+      <span class="login-link">... or click <a href="signup.html">Signup</a></span>
+    </div>
+  </div>
 
-  <label>Password:</label>
-  <input type="password" name="password" required />
+  <div class="right">
+    <h2>Savvy</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
 
-  <button type="submit">Login</button>
-</form>
+<script>
+  const btn = document.querySelector('.signup-btn');
 
-<p>Don't have an account? <a th:href="@{/register}">Register here</a></p>
+  btn.addEventListener('mousemove', e => {
+    const rect = e.target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    btn.style.setProperty('--x', x + 'px');
+    btn.style.setProperty('--y', y + 'px');
+  });
+</script>
 </body>
 </html>
