@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savvy UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/classes_style.css">
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<header class="topbar">
+  <div class="logo">
+    <i class="fas fa-bars menu-icon" id="menuToggle"></i>
+    <span class="brand-name">Savvy</span>
+  </div>
+  <div class="top-icons">
+    <div class="toggle-box"></div>
+    <i class="fa-solid fa-gear"></i>
+  </div>
+</header>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+  <ul>
+    <li><i class="fa-regular fa-user"></i><span>Profile</span></li>
+    <li><i class="fa-solid fa-landmark"></i><span>Dashboard</span></li>
+    <li><i class="fa-regular fa-star"></i><span>Favorites</span></li>
+    <li><i class="fa-solid fa-book-open"></i><span>Library</span></li>
+    <li><i class="fa-regular fa-clock"></i><span>History</span></li>
+    <li><i class="fa-solid fa-chart-bar"></i><span>Reports</span></li>
+  </ul>
+</aside>
+
+<!-- Main Content Area -->
+<main class="content" id="mainContent">
+  <!-- White Header Section -->
+  <div class="content-header">
+    <span>Groups</span>
+    <span>Students</span>
+  </div>
+
+  <!-- Groups Header -->
+  <div class="groups-header">
+    <select>
+      <option>Ordered by name</option>
+      <option>Ordered by Number of students</option>
+    </select>
+    <button>Create class</button>
+  </div>
+
+  <!-- Group Cards -->
+  <div class="group-container">
+    <div class="group-card">
+      <div class="group-header"></div>
+      <div class="group-body">
+        <div class="group-info">
+          <div class="group-name">Group name</div>
+          <div class="group-students">Number of students</div>
+        </div>
+        <div class="group-actions">
+          <i class="fa-solid fa-trash"></i>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.toggle('expanded');
+    document.getElementById('mainContent').classList.toggle('expanded');
+  });
+</script>
+
+</body>
+</html>

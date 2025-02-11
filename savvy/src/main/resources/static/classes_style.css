@@ -1,0 +1,217 @@
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Navigation Bar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    height: 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #39707E;
+    margin-left: 10px;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    font-size: 22px;
+    cursor: pointer;
+    color: #39707E;
+}
+
+/* Top Icons */
+.top-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-icons i {
+    font-size: 18px;
+    color: #39707E;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    width: 60px;
+    height: calc(100vh - 50px);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.sidebar.expanded {
+    width: 200px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+    color: #39707E;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li i {
+    width: 30px;
+    text-align: center;
+}
+
+.sidebar li span {
+    display: none;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.sidebar.expanded li span {
+    display: inline-block;
+}
+
+.sidebar li:hover {
+    color: #145E69;
+}
+
+/* Main Content */
+.content {
+    margin-left: 60px;
+    margin-top: 0; /* Removed margin-top */
+    background-color: #E4E4E4;
+    height: calc(100vh - 50px);
+    transition: margin-left 0.3s ease;
+    padding: 0;
+}
+
+.content.expanded {
+    margin-left: 200px;
+}
+
+/* White Section Above Content */
+.content-header {
+    background: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    color: gray;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: margin-left 0.3s ease;
+    margin-top: 0; /* Removed space between header and topbar */
+}
+
+.content-header span {
+    font-weight: normal;
+}
+
+.content-header span:first-child {
+    font-weight: bold;
+}
+
+/* Groups Header */
+.groups-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+}
+
+.groups-header select,
+.groups-header button {
+    padding: 8px 12px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Group Cards Layout */
+.group-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-left: 100px;
+    max-width: 280px;
+}
+
+.group-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.group-header {
+    background: linear-gradient(45deg, #396E7F, #6DA6B1);
+    height: 80px;
+}
+
+.group-body {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+}
+
+.group-students {
+    font-size: 14px;
+    color: gray;
+}
+
+.group-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.group-actions i {
+    cursor: pointer;
+    color: gray;
+    font-size: 16px;
+}
