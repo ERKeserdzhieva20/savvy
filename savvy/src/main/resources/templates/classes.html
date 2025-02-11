@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,31 +41,12 @@
     <span>Students</span>
   </div>
 
-  <!-- Groups Header -->
-  <div class="groups-header">
-    <select>
-      <option>Ordered by name</option>
-      <option>Ordered by Number of students</option>
-    </select>
-    <button>Create class</button>
-  </div>
+<!-- <include src="fragments/classes.html"></include>-->
+  <div th:replace="fragments/classes.html :: div.classes"></div>
 
-  <!-- Group Cards -->
-  <div class="group-container">
-    <div class="group-card">
-      <div class="group-header"></div>
-      <div class="group-body">
-        <div class="group-info">
-          <div class="group-name">Group name</div>
-          <div class="group-students">Number of students</div>
-        </div>
-        <div class="group-actions">
-          <i class="fa-solid fa-trash"></i>
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
+
 </main>
 
 <script>
